@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Frame x:Name="MainFrame"></Frame>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button   Width="100" Content="Назад" HorizontalAlignment="Right" Name="BackButton" Click="BackButton_Click"/>
+        <Frame x:Name="MainFrame" Grid.Row="1" ContentRendered="MainFrameContentRendered"></Frame>
     </Grid>
 </Window>

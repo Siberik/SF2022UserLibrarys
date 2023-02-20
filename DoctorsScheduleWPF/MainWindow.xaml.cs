@@ -26,5 +26,31 @@ namespace DoctorsScheduleWPF
             InitializeComponent();
             MainFrame.Navigate(new RecordingBreaksPage());
         }
+
+
+
+        private void MainFrameContentRendered(object sender, EventArgs e)
+        {
+            if (!MainFrame.CanGoBack)
+            {
+                BackButton.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                BackButton.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+            {
+                MainFrame.GoBack();
+            }
+        }
     }
-}
+
+ 
+    }
+    
+
