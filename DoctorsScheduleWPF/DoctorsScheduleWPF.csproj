@@ -173,5 +173,11 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SF2022UserLibrary\SF2022UserLibrary.csproj">
+      <Project>{ec2da604-ba49-4656-9251-3b9b28387cef}</Project>
+      <Name>SF2022UserLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

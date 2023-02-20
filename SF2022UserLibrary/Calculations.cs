@@ -53,6 +53,15 @@ namespace SF2022UserLibrary
             return availablePeriods.ToArray();
         }
 
+        /// <summary>
+        /// Проверка правильности времени
+        /// </summary>
+        /// <param name="timeStarting">
+        /// Строка с введённым временем
+        /// </param>
+        /// <returns>
+        /// Возвращает либо истину, либо ложь
+        /// </returns>
         public static bool CheckingTheTime(string timeStarting)
         {
             if (timeStarting == null)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoctorsScheduleWPF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,7 @@ namespace DoctorsScheduleWPF.View.Pages
     /// </summary>
     public partial class RecordingBreaksPage : Page
     {
+        Core db;
         public RecordingBreaksPage()
         {
             InitializeComponent();
