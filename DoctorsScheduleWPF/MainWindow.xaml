@@ -1,0 +1,26 @@
+﻿<Window x:Class="DoctorsScheduleWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoctorsScheduleWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Margin="15">
+                <TextBlock Text="Тип события" Margin="15"/>
+                <ComboBox Width="150" Margin="15"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="15">
+                <TextBlock Text="Время начала события" Margin="15"/>
+                <TextBox Width="150" Margin="15"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="15">
+                <TextBlock Text="Продолжительность" Margin="15"/>
+                <TextBox Width="150" Margin="15"/>
+            </StackPanel>
+            <Button Content="Сформировать расписание" Background="ForestGreen" Foreground="White" BorderBrush="White" Height="30" Width="200"/>
+        </StackPanel>
+    </Grid>
+</Window>
