@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace DoctorsScheduleWPF.Model
 {
-   public class Core
+    public class Core
     {
-        HospitalEntities context = new HospitalEntities();
+        public HospitalEntities context = new HospitalEntities();
     }
 }

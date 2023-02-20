@@ -1,6 +1,7 @@
 ﻿using DoctorsScheduleWPF.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+
 using System.Windows.Shapes;
 
 namespace DoctorsScheduleWPF.View.Pages
@@ -21,10 +23,17 @@ namespace DoctorsScheduleWPF.View.Pages
     /// </summary>
     public partial class RecordingBreaksPage : Page
     {
-        Core db;
+       
+        
         public RecordingBreaksPage()
         {
+            Core db = new Core();
             InitializeComponent();
+            
+            TypeEventComboBox.ItemsSource = db.context.Appointments.ToList();
+            TypeEventComboBox.DisplayMemberPath = "TypeEventId";
         }
+
+      
     }
 }
