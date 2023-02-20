@@ -1,5 +1,4 @@
-﻿using DoctorsScheduleWPF.View.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DoctorsScheduleWPF
+namespace DoctorsScheduleWPF.View.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для RecordingBreaksPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class RecordingBreaksPage : Page
     {
-        public MainWindow()
+        public RecordingBreaksPage()
         {
             InitializeComponent();
-            MainFrame.Navigate(new RecordingBreaksPage());
         }
     }
 }

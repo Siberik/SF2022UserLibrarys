@@ -7,20 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <StackPanel Orientation="Horizontal" Margin="15">
-                <TextBlock Text="Тип события" Margin="15"/>
-                <ComboBox Width="150" Margin="15"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="15">
-                <TextBlock Text="Время начала события" Margin="15"/>
-                <TextBox Width="150" Margin="15"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="15">
-                <TextBlock Text="Продолжительность" Margin="15"/>
-                <TextBox Width="150" Margin="15"/>
-            </StackPanel>
-            <Button Content="Сформировать расписание" Background="ForestGreen" Foreground="White" BorderBrush="White" Height="30" Width="200"/>
-        </StackPanel>
+        <Frame x:Name="MainFrame"></Frame>
     </Grid>
 </Window>
