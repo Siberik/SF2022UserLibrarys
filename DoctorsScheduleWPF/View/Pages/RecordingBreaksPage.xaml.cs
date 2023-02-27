@@ -30,8 +30,8 @@ namespace DoctorsScheduleWPF.View.Pages
             Core db = new Core();
             InitializeComponent();
             
-            TypeEventComboBox.ItemsSource = db.context.Appointments.ToList();
-            TypeEventComboBox.DisplayMemberPath = "TypeEventId";
+            TypeEventComboBox.ItemsSource = db.context.TypesEvent.ToList();
+            TypeEventComboBox.DisplayMemberPath = "TypeTitle";
         }
 
       
