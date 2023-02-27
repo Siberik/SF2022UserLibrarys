@@ -24,7 +24,7 @@ namespace DoctorsScheduleWPF
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new RecordingBreaksPage());
+            MainFrame.Navigate(new SchedulePage());
         }
 
 

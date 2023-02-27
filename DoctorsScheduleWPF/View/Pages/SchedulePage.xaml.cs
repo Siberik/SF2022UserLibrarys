@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+using SF2022UserLibrary;
 using System.Windows.Shapes;
 
 namespace DoctorsScheduleWPF.View.Pages
@@ -23,6 +24,18 @@ namespace DoctorsScheduleWPF.View.Pages
         public SchedulePage()
         {
             InitializeComponent();
+            
+            DateTime newdate = DateTime.Now;
+            Calculations obj = new Calculations();
+            for (int i = 0; i <15 ; i++)
+            {
+              
+                Button but = new Button();
+                but.Content = $"{newdate.ToString(@"dd.MM.yy")}";
+                ScheduleStackPanel.Children.Add(but);
+                newdate = newdate.AddDays(1);
+            }
         }
+
     }
 }

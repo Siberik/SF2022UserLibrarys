@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DoctorsScheduleWPF.View.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="650"
       Title="SchedulePage">
 
     <Grid>
@@ -14,29 +14,29 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         
-        <StackPanel Grid.Row="0" Background="MediumSeaGreen" Width="500" Height="200">
-            <StackPanel Orientation="Horizontal" Margin="15">
+        <StackPanel Grid.Row="0" Background="MediumSeaGreen" Width="600" Height="200" >
+            <StackPanel Orientation="Horizontal" Margin="5">
                 <TextBlock Text="Врач:" FontSize="18"/>
-                <TextBlock/>
+                <TextBlock x:Name="DoctorTextBlock"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="15">
+            <StackPanel Orientation="Horizontal" Margin="5">
                 <TextBlock Text="Специальность:" FontSize="18"/>
-                <TextBlock/>
+                <TextBlock x:Name="SpecializationTextBlock"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="15">
+            <StackPanel Orientation="Horizontal" Margin="5">
                 <TextBlock Text="ЛПУ:" FontSize="18"/>
-                <TextBlock/>
+                <TextBlock x:Name="LPYTextBlock"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="15">
+            <StackPanel Orientation="Horizontal" Margin="5">
                 <TextBlock Text="Адрес:" FontSize="18"/>
-                <TextBlock/>
+                <TextBlock x:Name="AddressTextBlock"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="15">
+            <StackPanel Orientation="Horizontal" Margin="5">
                 <TextBlock Text="Дата:" FontSize="18"/>
-                <TextBlock/>
+                <TextBlock x:Name="DataTextBlock"/>
             </StackPanel>
         </StackPanel>
-        <StackPanel>
+        <StackPanel x:Name="ScheduleStackPanel" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1">
             
         </StackPanel>
     </Grid>
