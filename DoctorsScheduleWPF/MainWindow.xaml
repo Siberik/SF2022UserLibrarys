@@ -5,13 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DoctorsScheduleWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Расписание" Icon="Assets\Images\птичька.png" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="359*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button   Width="100" Content="Назад" HorizontalAlignment="Right" Name="BackButton" Click="BackButton_Click"/>
-        <Frame x:Name="MainFrame" Grid.Row="1" ContentRendered="MainFrameContentRendered"></Frame>
+        <Button   Width="100" Content="Назад" HorizontalAlignment="Right" Name="BackButton" Click="BackButton_Click" Grid.Column="1"/>
+        <Frame x:Name="MainFrame" Grid.Row="1" ContentRendered="MainFrameContentRendered" Grid.ColumnSpan="2"></Frame>
     </Grid>
 </Window>

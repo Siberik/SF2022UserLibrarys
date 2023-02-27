@@ -64,17 +64,55 @@ namespace SF2022UserLibrary
         /// </returns>
         public static bool CheckingTheTime(string timeStarting)
         {
-            if (timeStarting == null)
+            var v= String.Empty;
+
+            if (String.IsNullOrWhiteSpace(timeStarting)==true)
+            {
+                return false;
+            }
+            try
+            {
+                 v = DateTime.Parse(timeStarting).ToString(@"HH:mm");
+            }
+            catch
+            {
+                return false;
+            }
+            
+
+            return true;
+        }
+        /// <summary>
+        /// Проверка правильности продолжительности
+        /// </summary>
+        /// <param name="timeStarting">
+        /// Строка с введённой продолжительностью
+        /// </param>
+        /// <returns>
+        /// Возвращает либо истину, либо ложь
+        /// </returns>
+        public static bool CheckingDuration(string timeStarting)
+        {
+
+            if (String.IsNullOrWhiteSpace(timeStarting) == true)
+            {
+                return false;
+            }
+            if (Convert.ToInt32(timeStarting) > 60 || Convert.ToInt32(timeStarting) < 0)
             {
                 return false;
             }
 
 
+
             return true;
         }
     }
+   
+}
 
-    public struct TimeInterval
+
+public struct TimeInterval
     {
         public TimeInterval(TimeSpan startTime, int durations)
         {
@@ -94,4 +132,4 @@ namespace SF2022UserLibrary
 
 
     
-}
+

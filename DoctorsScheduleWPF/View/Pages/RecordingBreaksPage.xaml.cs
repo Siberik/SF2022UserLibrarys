@@ -13,7 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-
+using SF2022UserLibrary;
 using System.Windows.Shapes;
 
 namespace DoctorsScheduleWPF.View.Pages
@@ -34,6 +34,19 @@ namespace DoctorsScheduleWPF.View.Pages
             TypeEventComboBox.DisplayMemberPath = "TypeTitle";
         }
 
-      
+
+        private void CreateScheduleButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (Calculations.CheckingTheTime(TimeStartEventTextBox.Text) == false)
+            {
+                MessageBox.Show("Вы ввели неверное значение продолжительности. \n Пожалуйста, введите время в формате HH:mm\n Где: \n •HH — часы \n •mm — минуты");
+            }
+            
+            if(Calculations.CheckingDuration(DurationTextBox.Text)==false)
+            {
+                MessageBox.Show("Вы ввели неверное значение");
+            }
+
+        }
     }
 }
