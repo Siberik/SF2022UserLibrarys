@@ -12,10 +12,10 @@
             <ColumnDefinition Width="359*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="35"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button   Width="100" Content="Назад" HorizontalAlignment="Right" Name="BackButton" Click="BackButton_Click" Grid.Column="1"/>
+        <Button   Width="70"  Content="Назад" HorizontalAlignment="Right" Name="BackButton" Click="BackButton_Click" Grid.Column="1"/>
         <Frame x:Name="MainFrame" Grid.Row="1" ContentRendered="MainFrameContentRendered" Grid.ColumnSpan="2" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>

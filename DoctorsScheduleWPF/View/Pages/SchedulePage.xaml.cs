@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using SF2022UserLibrary;
 using System.Windows.Shapes;
+using DoctorsScheduleWPF.View.Windows;
 
 namespace DoctorsScheduleWPF.View.Pages
 {
@@ -31,10 +32,17 @@ namespace DoctorsScheduleWPF.View.Pages
             {
               
                 Button but = new Button();
+                but.Name = $"ScheduleButton{i+1}";
+                but.Click += ScheduleButtonClick;
                 but.Content = $"{newdate.ToString(@"dd.MM.yy")}";
                 ScheduleStackPanel.Children.Add(but);
                 newdate = newdate.AddDays(1);
             }
+        }
+        private void ScheduleButtonClick(object sender, EventArgs e)
+        {
+            TableWindow tableWindow = new TableWindow();
+            tableWindow.ShowDialog();
         }
 
     }
