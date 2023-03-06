@@ -24,7 +24,7 @@ namespace DoctorsScheduleWPF.View.Pages
         Core db=new Core();
         public AuthorizationPage()
         {
-            this.NavigationService.Navigate(new RecordingBreaksPage());
+
             InitializeComponent();
            
         }
@@ -33,9 +33,13 @@ namespace DoctorsScheduleWPF.View.Pages
 
         private void AuthButtonClick(object sender, RoutedEventArgs e)
         {
-            if (LastNameTextBox.Text == db.context.Patients.Where(x => x.LastName == LastNameTextBox.Text).FirstOrDefault().ToString())
+            if (db.context.Patients.Where(x => x.Patronymic == LastNameTextBox.Text && x.IdPatient==PolisTextBox.Text).FirstOrDefault()!=null)
             {
-                this.NavigationService.Navigate(new RecordingBreaksPage());
+                this.NavigationService.Navigate(new TaskTableDoctors());
+            }
+            else
+            {
+                MessageBox.Show("Введены неверные данные!");
             }
         }
     }
