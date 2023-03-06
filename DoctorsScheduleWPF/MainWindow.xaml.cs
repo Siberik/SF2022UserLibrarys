@@ -24,7 +24,7 @@ namespace DoctorsScheduleWPF
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new SchedulePage());
+            MainFrame.Navigate(new AuthorizationPage());
         }
 
 
